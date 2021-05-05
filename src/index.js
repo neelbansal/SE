@@ -11,3 +11,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', require('./api/appointment/'));
 app.listen(port, () => console.log(`Express listening on http://localhost:${port}`));
+app.post("/", (req, res) => {
+res.sendFile("index1.html")
+});
